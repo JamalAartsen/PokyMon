@@ -94,6 +94,10 @@
 		C69C21062955B30200374870 /* PokyMon */ = {
 			isa = PBXGroup;
 			children = (
+				C69C21342955D5BD00374870 /* App */,
+				C69C21332955D42D00374870 /* PMData */,
+				C69C21322955D42400374870 /* PMDomain */,
+				C69C21312955D41600374870 /* PMPresentation */,
 				C69C21072955B30200374870 /* PokyMonApp.swift */,
 				C69C21092955B30200374870 /* ContentView.swift */,
 				C69C210B2955B30400374870 /* Assets.xcassets */,
@@ -125,6 +129,34 @@
 				C69C21242955B30500374870 /* PokyMonUITestsLaunchTests.swift */,
 			);
 			path = PokyMonUITests;
+			sourceTree = "<group>";
+		};
+		C69C21312955D41600374870 /* PMPresentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PMPresentation;
+			sourceTree = "<group>";
+		};
+		C69C21322955D42400374870 /* PMDomain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PMDomain;
+			sourceTree = "<group>";
+		};
+		C69C21332955D42D00374870 /* PMData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PMData;
+			sourceTree = "<group>";
+		};
+		C69C21342955D5BD00374870 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
