@@ -15,17 +15,11 @@ import Factory
     @Injected(Container.pokemonModelMapper) private var pokemonModelMapper
     
     func getAllPokemons() async {
-        print("💯 This is the jamal method inside homeViewModel!")
-        
         do {
             let allPokemons = try await getPokemonsWorker.getPokemons()
-            print("💯 All pokemons in viewmodel: \(allPokemons)")
             pokemons = allPokemons.compactMap({ pokemonModelMapper.map(pokemon: $0) })
         } catch {
             print("💯 Error: \(error)")
         }
-        
-        print("💯 You get the pokemons!")
-        
     }
 }

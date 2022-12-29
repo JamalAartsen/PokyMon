@@ -15,7 +15,7 @@ class PokemonModelMapper {
     func map(pokemon: Pokemon) -> PokemonModel {
         return PokemonModel(
             id: pokemon.id,
-            name: pokemon.name,
+            name: pokemon.name.capitalizingFirstLetter(),
             url: pokemon.url,
             imageURL: imageURLCreater.createURL(baseURL: baseURL, id: pokemon.id)
         )

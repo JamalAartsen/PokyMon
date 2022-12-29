@@ -2,7 +2,7 @@
 //  String+Extensions.swift
 //  PokyMon
 //
-//  Created by Jamal Aartsen on 28/12/2022.
+//  Created by Jamal Aartsen on 29/12/2022.
 //
 
 import Foundation
@@ -26,5 +26,13 @@ extension String {
     
     func stringToInt() -> Int {
         return Int(self) ?? 0
+    }
+    
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
     }
 }
