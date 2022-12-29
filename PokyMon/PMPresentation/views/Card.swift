@@ -12,6 +12,7 @@ struct Card: View {
     
     var name: String
     var image: String
+    var id: Int
     
     // TODO: URL must be outside view
     var body: some View {
@@ -19,6 +20,10 @@ struct Card: View {
             ZStack {
                 Color(hex: "#FAEAB1").frame(maxWidth: .infinity)
                 AsyncImage(url: URL(string: image))
+                
+                HStack {
+                   NumberCard(id: id)
+                }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             }
             Text(name)
                 .frame(maxWidth: .infinity, alignment: .leading)

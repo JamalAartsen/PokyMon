@@ -35,4 +35,14 @@ extension String {
     mutating func capitalizeFirstLetter() {
         self = self.capitalizingFirstLetter()
     }
+    
+    func createID() -> String {
+        switch self.count {
+        case 1: return "00\(self)"
+        case 2: return "0\(self)"
+        case 3: return "\(self)"
+        default:
+            return "00\(self)"
+        }
+    }
 }

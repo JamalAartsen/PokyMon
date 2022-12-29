@@ -33,7 +33,7 @@ struct ContentView: View {
                         // TODO: This filter can maybe put in nde viewmodel
                         LazyVGrid(columns: adaptiveColumns, spacing: 20) {
                             ForEach(viewModel.pokemons.filter({"\($0)".contains(searchText.capitalizingFirstLetter()) || searchText.isEmpty}), id: \.self) { pokemon in
-                                Card(name: pokemon.name, image: pokemon.imageURL)
+                                Card(name: pokemon.name, image: pokemon.imageURL, id: pokemon.id)
                             }
                         }.onAppear {
                             Task {
