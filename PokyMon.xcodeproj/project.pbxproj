@@ -23,6 +23,7 @@
 		C63D1F94295DA86900902FC3 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D1F93295DA86900902FC3 /* Color+Extensions.swift */; };
 		C63D1F99295DDC9900902FC3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D1F98295DDC9900902FC3 /* String+Extensions.swift */; };
 		C63D1F9C295DE4D000902FC3 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D1F9B295DE4D000902FC3 /* Card.swift */; };
+		C63D1F9E295DF03A00902FC3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D1F9D295DF03A00902FC3 /* SearchBar.swift */; };
 		C69C21082955B30200374870 /* PokyMonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69C21072955B30200374870 /* PokyMonApp.swift */; };
 		C69C210A2955B30200374870 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69C21092955B30200374870 /* ContentView.swift */; };
 		C69C210C2955B30400374870 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C69C210B2955B30400374870 /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		C63D1F93295DA86900902FC3 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		C63D1F98295DDC9900902FC3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		C63D1F9B295DE4D000902FC3 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		C63D1F9D295DF03A00902FC3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C69C21042955B30200374870 /* PokyMon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokyMon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C69C21072955B30200374870 /* PokyMonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokyMonApp.swift; sourceTree = "<group>"; };
 		C69C21092955B30200374870 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,13 +121,6 @@
 			path = mappers;
 			sourceTree = "<group>";
 		};
-		C63D1F83295C747600902FC3 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		C63D1F92295DA85000902FC3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				C63D1F9B295DE4D000902FC3 /* Card.swift */,
+				C63D1F9D295DF03A00902FC3 /* SearchBar.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -236,7 +232,6 @@
 		C69C21332955D42D00374870 /* PMData */ = {
 			isa = PBXGroup;
 			children = (
-				C63D1F83295C747600902FC3 /* Extensions */,
 				C63D1F7A295C679C00902FC3 /* mappers */,
 				C6C108B2295C30DF000514B7 /* models */,
 				C6C108BA295C34D3000514B7 /* PokemonAPI.swift */,
@@ -419,6 +414,7 @@
 				C6C108B6295C3209000514B7 /* Pokemon.swift in Sources */,
 				C63D1F8D295DA2B400902FC3 /* PokemonModel.swift in Sources */,
 				C63D1F89295D9D7700902FC3 /* PokemonsRepository.swift in Sources */,
+				C63D1F9E295DF03A00902FC3 /* SearchBar.swift in Sources */,
 				C63D1F7E295C696D00902FC3 /* PMData+Injection.swift in Sources */,
 				C63D1F8F295DA35B00902FC3 /* ImageURLCreater.swift in Sources */,
 				C63D1F99295DDC9900902FC3 /* String+Extensions.swift in Sources */,
