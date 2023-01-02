@@ -19,12 +19,12 @@ struct DetailsView: View {
             ScrollView {
                 VStack {
                     HStack {
-                        Text("\(viewModel.pokemon?.name ?? "No name")")
+                        Text("\(viewModel.pokemon?.name ?? "")")
                             .foregroundColor(Color(hex: "#0E0940"))
                             .font(.system(size: 32, weight: .bold))
                             .padding(EdgeInsets(top: 16, leading: 24, bottom: 16, trailing: 24))
                         Spacer()
-                        Text("#\(viewModel.pokemon?.id.description.createID() ?? "No ID")")
+                        Text("#\(viewModel.pokemon?.id.description.createID() ?? "")")
                             .foregroundColor(Color(hex: "#0E0940"))
                             .opacity(0.5)
                             .font(.system(size: 24))

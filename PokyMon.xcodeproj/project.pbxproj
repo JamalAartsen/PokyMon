@@ -10,6 +10,7 @@
 		C6114FA92962E19500321629 /* TypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6114FA82962E19500321629 /* TypeView.swift */; };
 		C6114FAB2962EA6B00321629 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6114FAA2962EA6B00321629 /* MainView.swift */; };
 		C6114FAE29630D2E00321629 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6114FAD29630D2E00321629 /* FavoritesView.swift */; };
+		C6114FB02963143100321629 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6114FAF2963143100321629 /* TitleView.swift */; };
 		C63D1F73295C671F00902FC3 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D1F72295C671F00902FC3 /* Response.swift */; };
 		C63D1F75295C673900902FC3 /* PokemonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D1F74295C673900902FC3 /* PokemonEntity.swift */; };
 		C63D1F77295C675A00902FC3 /* TypesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D1F76295C675A00902FC3 /* TypesEntity.swift */; };
@@ -78,6 +79,7 @@
 		C6114FA82962E19500321629 /* TypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeView.swift; sourceTree = "<group>"; };
 		C6114FAA2962EA6B00321629 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C6114FAD29630D2E00321629 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		C6114FAF2963143100321629 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		C63D1F72295C671F00902FC3 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		C63D1F74295C673900902FC3 /* PokemonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonEntity.swift; sourceTree = "<group>"; };
 		C63D1F76295C675A00902FC3 /* TypesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesEntity.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				C63D1F9D295DF03A00902FC3 /* SearchBar.swift */,
 				C63D1F9F295E05DA00902FC3 /* NumberCard.swift */,
 				C6114FA82962E19500321629 /* TypeView.swift */,
+				C6114FAF2963143100321629 /* TitleView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				C6922131295EDAD30091184B /* Types.swift in Sources */,
 				C6C108B4295C3160000514B7 /* GetPokemonWorker.swift in Sources */,
 				C63D1F94295DA86900902FC3 /* Color+Extensions.swift in Sources */,
+				C6114FB02963143100321629 /* TitleView.swift in Sources */,
 				C63D1F9C295DE4D000902FC3 /* Card.swift in Sources */,
 				C63D1F79295C677600902FC3 /* PokemonDetailsEntity.swift in Sources */,
 				C6922142295EE8B70091184B /* StatisticsModel.swift in Sources */,

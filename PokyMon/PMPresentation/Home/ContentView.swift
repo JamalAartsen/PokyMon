@@ -25,11 +25,7 @@ struct ContentView: View {
             Color(hex: "#EDF6FF").ignoresSafeArea()
             VStack {
                 SearchBar(text: $searchText)
-                Text("All Pokemons")
-                    .font(.system(size: 25, weight: .bold))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading)
-                    .padding(.bottom, -5)
+                TitleView(title: "All Pokemons", bottomPadding: -5, leftPadding: 15)
                 ScrollView {
                     // TODO: This filter can maybe put in nde viewmodel
                     LazyVGrid(columns: adaptiveColumns, spacing: 20) {
@@ -43,7 +39,7 @@ struct ContentView: View {
                             await viewModel.getAllPokemons()
                         }
                     }
-                    .padding()
+                    .padding(15)
                 }
             }
         }
