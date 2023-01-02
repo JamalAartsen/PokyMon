@@ -16,6 +16,10 @@ struct MainView: View {
                     .tabItem {
                         Label("Pokemons", systemImage: "soccerball")
                     }
+                FavoritesView()
+                    .tabItem {
+                        Label("Favorites", systemImage: "heart")
+                    }
             }
             .onAppear {
                 if #available(iOS 15.0, *) {

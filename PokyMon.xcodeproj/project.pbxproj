@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C6114FA92962E19500321629 /* TypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6114FA82962E19500321629 /* TypeView.swift */; };
 		C6114FAB2962EA6B00321629 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6114FAA2962EA6B00321629 /* MainView.swift */; };
+		C6114FAE29630D2E00321629 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6114FAD29630D2E00321629 /* FavoritesView.swift */; };
 		C63D1F73295C671F00902FC3 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D1F72295C671F00902FC3 /* Response.swift */; };
 		C63D1F75295C673900902FC3 /* PokemonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D1F74295C673900902FC3 /* PokemonEntity.swift */; };
 		C63D1F77295C675A00902FC3 /* TypesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D1F76295C675A00902FC3 /* TypesEntity.swift */; };
@@ -76,6 +77,7 @@
 /* Begin PBXFileReference section */
 		C6114FA82962E19500321629 /* TypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeView.swift; sourceTree = "<group>"; };
 		C6114FAA2962EA6B00321629 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		C6114FAD29630D2E00321629 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		C63D1F72295C671F00902FC3 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		C63D1F74295C673900902FC3 /* PokemonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonEntity.swift; sourceTree = "<group>"; };
 		C63D1F76295C675A00902FC3 /* TypesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesEntity.swift; sourceTree = "<group>"; };
@@ -151,6 +153,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6114FAC29630D1400321629 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				C6114FAD29630D2E00321629 /* FavoritesView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		C63D1F7A295C679C00902FC3 /* mappers */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +297,7 @@
 		C69C21312955D41600374870 /* PMPresentation */ = {
 			isa = PBXGroup;
 			children = (
+				C6114FAC29630D1400321629 /* Favorites */,
 				C6922148295F17E00091184B /* Details */,
 				C6922147295F17D10091184B /* Home */,
 				C6922139295EE7260091184B /* models */,
@@ -526,6 +537,7 @@
 				C63D1F91295DA3CB00902FC3 /* PMPresentation+Injection.swift in Sources */,
 				C692212B295ED33E0091184B /* StatisticsEntity.swift in Sources */,
 				C6114FA92962E19500321629 /* TypeView.swift in Sources */,
+				C6114FAE29630D2E00321629 /* FavoritesView.swift in Sources */,
 				C6922131295EDAD30091184B /* Types.swift in Sources */,
 				C6C108B4295C3160000514B7 /* GetPokemonWorker.swift in Sources */,
 				C63D1F94295DA86900902FC3 /* Color+Extensions.swift in Sources */,
