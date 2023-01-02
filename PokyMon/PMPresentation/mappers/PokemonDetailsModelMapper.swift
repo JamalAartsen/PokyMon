@@ -47,7 +47,7 @@ class AbilitiesModelMapper {
     }
     
     func mapAbility(ability: Ability) -> AbilityModel {
-        return AbilityModel(name: ability.name)
+        return AbilityModel(name: ability.name.capitalizingFirstLetter())
     }
 }
 

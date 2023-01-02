@@ -12,6 +12,7 @@ struct DetailsView: View {
     var id: Int
     @StateObject private var viewModel = DetailsViewModel()
     @State var isFavoriteClicked = false
+    @State private var selectedDetails: CharacterDetails = .about
     
     var body: some View {
         ZStack {
@@ -44,27 +45,63 @@ struct DetailsView: View {
                     }
                     .padding(EdgeInsets(top: 0, leading: 24, bottom: 0, trailing: 24))
                     
-                    AsyncImage(url: URL(string: viewModel.pokemon?.imageURL ?? "")) { image in
-                        if let image = image {
-                            image
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 200, height: 200)
+                    DetailsCharacterImage(imageURL: viewModel.pokemon?.imageURL)
+                    
+                    Picker("Choose details", selection: $selectedDetails) {
+                        ForEach(CharacterDetails.allCases, id: \.self) {
+                            Text($0.rawValue)
                         }
-                    } placeholder: {
-                        ProgressView()
-                            .frame(width: 200, height: 200)
                     }
-                    .padding(24)
+                    .pickerStyle(.segmented)
+                    .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+                    
+                    if let pokemon = viewModel.pokemon {
+                        CharacterDetailsInformationView(
+                            selectedDetails: selectedDetails,
+                            pokemonDetailsModel: pokemon
+                        ).padding(EdgeInsets(top: 0, leading: 20, bottom: 10, trailing: 20))
+                    } else {
+                        ProgressView()
+                    }
+                    
                 }
             }
         }.toolbar {
-            Button {
-                self.isFavoriteClicked.toggle()
-            } label: {
-                Label("Favorite", systemImage: self.isFavoriteClicked ? "heart.fill" : "heart")
-            }
+            FavoriteButton(isFavoriteClicked: $isFavoriteClicked)
         }
+    }
+}
+
+struct FavoriteButton: View {
+    
+    @Binding var isFavoriteClicked: Bool
+    
+    var body: some View {
+        Button {
+            isFavoriteClicked.toggle()
+        } label: {
+            Label("Favorite", systemImage: isFavoriteClicked ? "heart.fill" : "heart")
+        }
+    }
+}
+
+struct DetailsCharacterImage: View {
+    
+    var imageURL: String?
+    
+    var body: some View {
+        AsyncImage(url: URL(string: imageURL ?? "")) { image in
+            if let image = image {
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
+            }
+        } placeholder: {
+            ProgressView()
+                .frame(width: 200, height: 200)
+        }
+        .padding(24)
     }
 }
 

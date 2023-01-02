@@ -11,7 +11,6 @@ import Factory
 
 @MainActor class DetailsViewModel: ObservableObject {
    
-    // TODO: Dit moet niet nil zijn
     @Published private(set) var pokemon: PokemonDetailsModel? = nil
     @Injected(Container.getPokemonByIDWorker) private var getPokemonByIDWorker
     @Injected(Container.pokemonDetailsModelMapper) private var pokemonDetailsMapper

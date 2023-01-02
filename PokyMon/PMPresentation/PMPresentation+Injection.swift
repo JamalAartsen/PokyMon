@@ -19,4 +19,5 @@ extension Container {
     static let typesModelMapper = Factory { TypesModelMapper() }
     static let abilitiesModelMapper = Factory { AbilitiesModelMapper() }
     static let statisticsModelMapper = Factory { StatisticsModelMapper() }
+    static let arrayToStringMapper = Factory { ArrayToStringMapper() }
 }
