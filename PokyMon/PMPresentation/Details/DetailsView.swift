@@ -11,6 +11,7 @@ struct DetailsView: View {
     
     var id: Int
     @StateObject private var viewModel = DetailsViewModel()
+    @State var isFavoriteClicked = false
     
     var body: some View {
         ZStack {
@@ -56,6 +57,12 @@ struct DetailsView: View {
                     }
                     .padding(24)
                 }
+            }
+        }.toolbar {
+            Button {
+                self.isFavoriteClicked.toggle()
+            } label: {
+                Label("Favorite", systemImage: self.isFavoriteClicked ? "heart.fill" : "heart")
             }
         }
     }

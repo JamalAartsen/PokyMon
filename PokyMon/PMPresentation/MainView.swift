@@ -32,7 +32,7 @@ struct MainView: View {
             }
             .background(Color(hex: "#EDF6FF"))
             .tint(Color(hex: "#5631E8"))
-        }
+        }.tint(Color(hex: "#0E0940"))
     }
 }
 
