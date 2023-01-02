@@ -11,6 +11,7 @@ struct NumberCard: View {
     
     var id: Int
     
+    // TODO: createID in viewmodel
     var body: some View {
         HStack {
             Text("\(id)".createID())

@@ -9,4 +9,5 @@ import Foundation
 
 protocol PokemonAPIProtocol {
     func fetchPokemons() async throws -> [Pokemon]
+    func fetchPokemonByID(id: Int) async throws -> PokemonDetails?
 }

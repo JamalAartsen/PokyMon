@@ -13,7 +13,7 @@ import Factory
     @Published private(set) var pokemons = [PokemonModel]()
     @Injected(Container.getPokemonsWorker) private var getPokemonsWorker
     @Injected(Container.pokemonModelMapper) private var pokemonModelMapper
-    
+
     func getAllPokemons() async {
         do {
             let allPokemons = try await getPokemonsWorker.getPokemons()

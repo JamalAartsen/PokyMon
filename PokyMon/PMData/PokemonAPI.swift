@@ -11,6 +11,7 @@ import Factory
 class PokemonAPI: PokemonAPIProtocol {
     
     @Injected(Container.pokemonMapper) private var pokemonMapper
+    @Injected(Container.pokemonDetailsMapper) private var pokemonDetailsMapper
     
     private var session = URLSession.shared
     private let baseURL = "pokeapi.co"
@@ -23,6 +24,15 @@ class PokemonAPI: PokemonAPIProtocol {
         let pokemons = try JSONDecoder().decode(Response.self, from: data)
         
         return pokemons.results.compactMap({ pokemonMapper.map(entity: $0) })
+    }
+    
+    func fetchPokemonByID(id: Int) async throws -> PokemonDetails? {
+        guard let url = URL(string: .createComplicatedUrl(scheme: scheme, host: baseURL, path: PokemonAPIEndpoints.pokemon + "/\(id)")) else { return nil }
+        
+        let (data, _) = try await session.data(from: url)
+        let pokemon = try JSONDecoder().decode(PokemonDetailsEntity.self, from: data)
+        
+        return pokemonDetailsMapper.map(pokemonDetailsEntity: pokemon)
     }
 }
 

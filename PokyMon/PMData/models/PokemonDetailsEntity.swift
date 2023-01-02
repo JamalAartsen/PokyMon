@@ -8,18 +8,12 @@
 import Foundation
 
 struct PokemonDetailsEntity: Codable {
-    let id = UUID()
-    
+    var id: Int
     var base_experience: Int
     var name: String
     var height: Int
     var weight: Int
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id
-//        case base_experience
-//        case name
-//        case height
-//        case weight
-//    }
+    var types: [TypesEntity]
+    var abilities: [AbilitiesEntity]
+    var stats: [StatisticsEntity]
 }

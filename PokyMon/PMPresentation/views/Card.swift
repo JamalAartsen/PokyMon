@@ -19,7 +19,12 @@ struct Card: View {
         VStack {
             ZStack {
                 Color(hex: "#FAEAB1").frame(maxWidth: .infinity)
-                AsyncImage(url: URL(string: image))
+                AsyncImage(url: URL(string: image)) { image in
+                    image
+                        .aspectRatio(contentMode: .fit)
+                } placeholder: {
+                    ProgressView()
+                }
                 
                 HStack {
                    NumberCard(id: id)

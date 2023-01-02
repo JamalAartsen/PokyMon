@@ -11,7 +11,7 @@ import SwiftUI
 struct PokyMonApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }

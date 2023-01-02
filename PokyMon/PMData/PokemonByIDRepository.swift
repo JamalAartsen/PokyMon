@@ -1,19 +1,15 @@
 //
-//  PokemonsRepository.swift
+//  PokemonByIDRepository.swift
 //  PokyMon
 //
-//  Created by Jamal Aartsen on 29/12/2022.
+//  Created by Jamal Aartsen on 30/12/2022.
 //
 
 import Foundation
 import Factory
 
-class PokemonsRepository: GetPokemonsWorker {
+class PokemonByIDRepository: GetPokemonByIDWorker {
     @Injected(Container.pokemonAPI) private var pokemonAPI
-    
-    func getPokemons() async throws -> [Pokemon] {
-        return try await pokemonAPI.fetchPokemons()
-    }
     
     func getPokemonByID(id: Int) async throws -> PokemonDetails? {
         return try await pokemonAPI.fetchPokemonByID(id: id)
